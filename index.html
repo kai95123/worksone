@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>開心農場</title>
+	<style>
+		/*圖片圓形呈現*/
+    	.box-person{
+    		display: inline-block;
+    		width: 200px;
+    		height: 200px;
+    		margin: 10px;
+    		background-color: #1CB70E;
+    		border: 2px solid #333;
+    	}
+		.box-person:hover{
+			box-shadow: 2px 2px 5px 5px #3D98D9;
+		}
+
+    	.bgc{
+    		background-position: center center;
+    		background-size: cover; 
+    	}
+		/*幻燈片背景圖*/
+		.bg-cover{
+			background-repeat: no-repeat;
+			background-position: center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.carousel-caption{
+			background-color: rgba(0,0,0,0.5);
+			font-weight: bold;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.titleh2{
+			color: #29D742;
+		}
+		
+		@media(max-width: 576px) {
+			.txet-color{
+				color: white;
+				font-weight: bold;
+			}
+		}
+	</style>
+  </head>
+  <body>
+  	<!-- 最上層 -->
+   	<section class="bg-info">
+   		<div class="container">
+   			<div class="row justify-content-end">
+   				<div class="text-light">
+   					<i class="fab fa-facebook"></i>
+   					<i class="fab fa-line"></i>
+   					<i class="fab fa-instagram"></i>
+   					<i class="fab fa-youtube"></i>
+   				</div>
+   			</div>
+   		</div>
+   	</section>
+	<!-- 第二層商店介紹 -->
+   	<section>
+   		<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+   			<div class="container">
+			  <a class="navbar-brand" href="#"><i class="fas fa-seedling"></i></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="20190327-organic-2.html">關於我們</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="20190327-organic-3.html">產品介紹</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">免運活動即將開始</a>
+			      </li>
+			    </ul>
+			    <div class="form-inline my-2 my-lg-0">
+			      <button class="btn btn-outline-danger my-2 mr-3 my-sm-0" type="submit" data-toggle="modal" data-target="#regModal">註冊</button>
+			      <button class="btn btn-primary my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#loginModal">登入</button>
+			    </div>
+			  </div>
+			</div>
+		</nav>	
+   	</section>
+
+
+
+
+	<!-- 會員註冊 -->
+	<div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header bg-primary">
+	        <h5 class="modal-title text-white" id="exampleModalLabel">新會員註冊</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="form-group">
+	        		<label for="username">帳號</label>
+	        		<input type="text" class="form-control" id="username" name="username">
+	        	</div>
+				<!-- 帳號警告語 -->
+	        	<div id="error_name"></div>
+
+	        	<div class="form-group">
+	        		<label for="password">密碼</label>
+	        		<input type="password" class="form-control" id="password" name="password">
+	        	</div>
+				<!-- 密碼警告語 -->
+	        	<div id="error_password"></div>
+
+	        	<div class="form-group">
+	        		<label for="email">email</label>
+	        		<input type="email" class="form-control" id="email" name="email">
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="電話">tel</label>
+	        		<input type="tel" class="form-control" id="tel" name="tel">
+	        	</div>
+				<!-- 電話警告語 -->
+	        	<div id="error_tel"></div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary">登入</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- 會員登入 -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header bg-info">
+	        <h5 class="modal-title text-white" id="exampleModalLabel">會員登入</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="form-group">
+	        		<label for="username">帳號</label>
+	        		<input type="text" class="form-control" id="username" placeholder="請輸入帳號">
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="password">密碼</label>
+	        		<input type="password" class="form-control" id="password" placeholder="請輸入密碼">
+	        	</div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary">登入</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- 第三層幻燈片 -->
+   	<section>
+   		<div class="bd-example">
+		  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		    <ol class="carousel-indicators">
+		      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+		      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+		      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+		    </ol>
+		    <div class="carousel-inner">
+		      <div class="carousel-item active bg-cover" style="background-image: url(image-o/title1.jpg); height: 800px;">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h2 class="titleh2">生態友善</h2>
+		          <p>友善土地的耕作方式，以愛護地球、永續循環的方式種植作物。降低用藥量、減少化學藥劑使用，讓土地恢復自然平衡
+					</p>
+					<p>We only cooperates with farmers who use less pesticide and trates the Earth well.</p>
+		        </div>
+		      </div>
+
+		      <div class="carousel-inner">
+		      <div class="carousel-item  bg-cover" style="background-image: url(image-o/title2.jpg); height: 800px;">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h2 class="titleh2">有機栽種</h2>
+		          <p>堅持不用任何化學農藥栽種，讓客人買得安心，吃得安心</p>
+		          <p>Organic farming</p>
+		        </div>
+		      </div>
+
+		      <div class="carousel-inner">
+		      <div class="carousel-item  bg-cover" style="background-image: url(image-o/DSC05048.JPG); height: 800px;">
+		        <div class="carousel-caption d-none d-md-block">
+		          <h2 class="titleh2">食農知識教育</h2>
+		          <p>食得安心，必須從生活上的生活知識開始。分享正確的知識，了解作物、珍惜食物、感謝土地。</p>
+		          <p>Eating safely should start with knowledge therefore sharing correct knowledge is our mission.</p>
+		        </div>
+		      </div>
+		     
+		    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+		      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+		  </div>
+		</div>
+   	</section>
+	<!-- 第四層icon使用 介紹 -->
+   	<section class="table-warning py-3">
+   		<div class="container">
+   			<div class="row">
+   				<div class="col-sm-4 text-dark text-center">
+   					<i class="fas fa-carrot fa-8x"></i>
+   					<h2 class="mt-4">無毒栽種</h2>
+   				</div>
+   				<div class="col-sm-4 text-dark text-center">
+   					<i class="fas fa-lemon fa-8x"></i>
+   					<h2 class="mt-4">健康安心</h2>
+   				</div>
+   				<div class="col-sm-4 text-dark text-center">
+   					<i class="fas fa-apple-alt fa-8x"></i>
+   					<h2 class="mt-4">優質首選</h2>
+   				</div>
+   			</div>
+   		</div>
+   	</section>
+	<!-- 第五層 左邊圖片背景 右邊文字 -->
+	<section class="bg-light py-3" style="position: relative;">
+		<div class="row">
+			<div class="col-sm-5 bg-cover" style="position: absolute; top: 0; bottom: 0; background-image: url(image-o/DSC05088.JPG);"></div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-end">
+				<div class="col-sm-7 txet-color">
+					<h3>友善土地栽種</h3>
+					<p>	友善土地的概念是找回早期農業時期的精神，但是結合科技的智慧，不再使用化學肥料增加作物生長速度，改採用自然競爭讓作物天生具有強健的生長力，面對作物常見的病，採用有機資材，例如苦粕油、碳酸氫鉀、蘇力菌、窄域油等，讓有機的資材來對付病菌；利用輪作、間作、綠肥的有機農業概念，讓因為作物特性不同而自然產生互助，也避免了蟲害。</p>
+					<a href="https://www.beclass.com/rid=22413a05c39f7bf6cc9d" class="btn btn-outline-info">詳細資料</a>
+					<div class="row mt-3">
+						<div class="col-sm-6">
+							<h2>有機農業</h2>
+							<p>有機農業是一種較不污染環境、不破壞生態，並能提供消費者健康與安全農產品的生產方式。有機農業之定義因各國法律之規定而不同，隨著農業技術的演變，有機農業法規的要求亦漸趨嚴格。</p>
+						</div>
+						<div class="col-sm-6">
+							<h3>有機農業有益生態環境</h3>
+							<p>降低對環境污染、農業廢棄物回收再生資源利用、建立良好之耕作制度、改進空氣品質、防止土壤沖蝕</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 第六層 d-flex使用 文字與圖左右排 -->
+	<section class="bg-light py-3">
+		<div class="container">
+			<h2 class="text-center mb-4">各產品米食介紹</h2>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="d-flex">
+						<div class="mr-3">
+							<div class="box-person box rounded-circle bgc" style="background-image: url(image-o/rice03.jpg);"></div>
+						</div>
+						<div>
+							<h3>米麩</h3>
+							<p>同時含有胚芽與胚乳的稱為胚芽米，僅剩胚乳的則稱為精白米。米麩，顧名思義為米的麩皮，其實就是指米糠層。米糠層含有豐富的維生素、礦物質與膳食纖維，因此包含了米糠層的糙米，才是食品營養專家推薦攝食的全穀類食材。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="d-flex">
+						<div class="mr-3">
+							<div class="box-person box rounded-circle bgc" style="background-image: url(image-o/rice2-3.jpg);"></div>
+						</div>
+						<div>
+							<h3>糙米</h3>
+							<p>糙米是稻米脫殼後的米，保留了粗糙的外層，顏色較精製白米深。日本稱為玄米，英文稱為brown rice（棕米）。糙米磨去外層可以製得白米，因為糙米保存完整的稻米營養，富含蛋白質、脂質、纖維及維生素B1等，所以是比白米更健康的食物。但口感較硬。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="d-flex">
+						<div class="mr-3">
+							<div class="box-person box rounded-circle bgc" style="background-image: url(image-o/DSC05161玉米.gif);"></div>
+						</div>
+						<div>
+							<h3>玉米</h3>
+							<p>玉米（學名：Zea mays）是一年生禾本科草本植物，是全世界總產量最高的重要糧食作物。同時也可以當作飼料使用，還有在生物科技產業作為乙醇燃料的原材料。而且玉米更在各個化工領域被大量利用著，做成塑膠等等不同的物品。</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="d-flex">
+						<div class="mr-3">
+							<div class="box-person box rounded-circle bgc" style="background-image: url(image-o/rice.jpg);"></div>
+						</div>
+						<div>
+							<h3>白米</h3>
+							<p>由於白米在加工過程中經過精磨、去掉大米外層部分等程序，白米的營養價值要低於其它粗製米。
+							不過在歷史上，就口感與香味而言，絕大多數人認為白米勝過其它粗製米，如糙米、胚芽米等，所以人們大都願意挑選白米食用。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 第七層 左右圖文字 -->
+	<section class="bg-light py-3" style="position: relative;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7 txet-color"  style="z-index: 100">
+					<dl class="row">
+						  <dt class="col-sm-3">有機產品認知</dt>
+						  <dd class="col-sm-9">有機農業是遵守自然資源循環永續利用原則，不允許使用合成化
+								學物質，強調水土資源保育與生態平衡之管理系統，並達到生產自然安全農產
+								品目標之農業。」</dd>
+
+						  <dt class="col-sm-3">健康飲食注意事項</dt>
+						  <dd class="col-sm-9">
+						    <p>失調的飲食習慣是健康殺手：避免高油、高鹽的烹調方式，可減少心血管疾病罹患率。不偏食，適當攝取；講究衛生，營養加分。</p>
+						  </dd>
+
+						  <dt class="col-sm-3">購買管道</dt>
+						  <dd class="col-sm-9">現在線上平台上購買容易取得，許多平台都有跟小農合作有機蔬菜的買賣。</dd>
+
+						  <dt class="col-sm-3 text-truncate">有機產品推廣</dt>
+						  <dd class="col-sm-9">台灣地區有機農業發展，經試驗研究評估、生產示範推廣、
+						研討會及農民訓練講習、成果發表及展售品嚐等活動，已具初步成果。(</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-end">
+			<div class="col-sm-5 bg-cover" style="position: absolute;top: 0; bottom: 0; background-image: url(image-o/DSC05179.JPG);"></div>
+		</div>
+	</section>
+	<!-- 第八層 表單與地圖嵌入 -->
+	<section class="bg-light py-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.133529435806!2d120.64910041536609!3d24.026355984094213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693a4468be3c8d%3A0xc46dc8efe241dca5!2zNTAy5b2w5YyW57ij6Iqs5ZyS6YSJ5oW25Yqf6KGXMTAx5be3!5e0!3m2!1szh-TW!2stw!4v1556869678113!5m2!1szh-TW!2stw" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-sm-6">
+					<form action="">
+						<div class="form-group">
+							<label for="name">姓名</label>
+							<input type="text" class="form-control" id="name">
+						</div>
+						<div class="form-group">
+							<label for="tel">電話</label>
+							<input type="tel" class="form-control" id="tel">
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" id="email">
+						</div>
+						<div class="form-group">
+							<label for="number">人數</label>
+							<input type="number" class="form-control" id="number">
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+						  <label class="form-check-label" for="exampleRadios1">
+						    需要預購
+						  </label>
+						</div>	
+
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
+						  <label class="form-check-label" for="exampleRadios1">
+						    不需要預購
+						  </label>
+						</div>
+						<div class="text-right">
+							<a href="#" class="btn btn-outline-danger">取消</a>
+							<a href="#" class="btn btn-primary">確定</a>
+						</div>  
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 第九層 左右圖凸出版面 -->
+	<section class="bg-light py-3">
+		<div class="container-fluid">
+			<div class="row text-white">
+				<div class="col-sm-6 bg-cover" style="background-image: url(image-o/IMG_8866.JPG);height: 300px;">
+					<div class="row">
+						<div class="col-sm-9 py-5">
+							<small>歡迎採購</small>
+							<p>栗子地瓜口感吃起來軟軟綿綿的，蒸、烤都非常好吃！香氣十足、甜度高～ 打成地瓜牛奶、做成甜點也非常棒呢！</p>
+							<a href="20190327-organic-Sweet potato.html" class="btn btn-outline-info">歡迎購買!!</a>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-6 bg-cover" style="background-image: url(image-o/DSC05088.JPG);height: 300px;">
+					<div class="row">
+						<div class="col-sm-9 py-5">
+							<small>歡迎採購</small>
+							<p>牛番茄富含番茄紅素，肉厚、汁少適合熟食，加熱烹煮後茄紅素會釋出更多，營養價值極高。</p>
+							<a href="20190327-organic-Cow tomato.html" class="btn btn-outline-info">歡迎購買!!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 第十層 頁尾宣告 -->
+	<section class="bg-light py-3">
+		<div class="container">
+			<div class="row">
+				<nav class="nav">
+				  <a class="nav-link disabled"" href="#">開心農場所有權</a>
+				  <a class="nav-link" href="#">客服服務</a>
+				  <a class="nav-link" href="#">問與答</a>
+				</nav>
+			</div>
+		</div>
+	</section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <script>
+    	//註冊監聽
+		$(function(){
+				$("#username").bind("input propertychange" , function(){
+					if ($("#username").val().length < 5 ){
+						$("#error_name").html("不得小於五個字元");
+						$("#error_name").css("color","blue");
+					}
+					else{
+						$("#error_name").html("");
+					}
+				});
+
+				$("#password").bind("input propertychange", function(){
+					if($("#password").val().length < 8){
+						$("#error_password").html("不得小於八字元");
+						$("#error_password").css("color","red");
+					}
+					else{
+						$("#error_password").html("");
+					}
+				});
+
+				$("#tel").bind("input propertychange" , function(){
+					if ($("#tel").val().length < 10){
+						$("#error_tel").html("不得小於10位數");
+						$("#error_tel").css("color","green");	
+					}
+					else{
+						$("#error_tel").html("");
+					}
+				});
+			});
+	</script>
+  </body>
+</html>

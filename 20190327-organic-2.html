@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>開心農場-關於我們</title>
+    <style>
+   		/*背景畫面*/
+    	.bg-cover{
+			background-repeat: no-repeat;
+			background-position: center center;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		/*背景上的字卡*/
+		.word{
+    		width: 400px;
+    		height: 200px;
+    		position: absolute;
+    		top: 55%;
+    		left: 10%;
+    		background-color:rgba(0,0,0,0.5);
+			color: white;
+			padding: 10px;
+			font-weight: bold;
+    	}
+    	.word2{
+    		width: 400px;
+    		height: 200px;
+    		position: absolute;
+    		top: 13%;
+    		left: 58%;
+    		background-color:rgba(256,256,256,0.5);
+			color: black;
+			padding: 10px;
+			font-weight: bold;
+    	}
+    	.timeline-section{
+			position: relative;
+		}
+		.timeline-section:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 5px;
+			background-color: #000;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.timeline-pointer{
+    		position: relative;
+    	}
+    	.timeline-pointer:after{
+    		content: "";
+    		position: absolute;
+    		top: 0;
+    		bottom: 0;
+    		width: 20px;
+    		height: 20px;
+    		left: 50%;
+    		transform: translateX(-50%);
+    		background-color: #077BC2;
+    		z-index: 1;
+    		border: 2px solid #ccc;
+    		border-radius: 50%;
+    	}
+    	@media(max-width: 576px){
+			.timeline-pointer:after,.timeline-section:after{
+				display: none;
+			}
+			.word{
+	    		width: 100%;
+	    		height: auto;
+	    		top: 230px;
+	    		left: 0%;
+	    		position: absolute;
+	    		background-color:rgba(0,0,0,0.5);
+				color: white;
+				padding: 10px;
+				font-weight: bold;
+	    	}
+	    	.word2{
+	    		width: 100%;
+	    		height: auto;
+	    		position: absolute;
+	    		top: 400px;
+	    		left: 0%;
+	    		background-color:rgba(256,256,256,0.5);
+				color: black;
+				padding: 10px;
+				font-weight: bold;
+	    	}
+    	}
+
+    	body{
+    		background-color:#E89B4A;
+    	}
+		h1, h2, h3, h4, h5, h6{
+		    		font-weight: bold;
+    	}
+    	.carousel-caption{
+    		background-color: rgba(0,0,0,0.5);
+    		font-size: 18px;
+    		font-weight: bold;
+
+    	}
+    	.title{
+    		color: #F64063;
+    	}
+    	.footer{
+			background-color: #000;
+			font-size: 20px;
+			color: #fff;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		
+		}
+		.list{
+    		list-style-type: none;
+    		font-weight: bold;
+    		margin:15px 0;
+    	}
+		
+    </style>
+  </head>
+  <body>
+    <!-- 最上層 -->
+   	<section class="bg-info">
+   		<div class="container">
+   			<div class="row justify-content-end">
+   				<div class="text-light">
+   					<i class="fab fa-facebook"></i>
+   					<i class="fab fa-line"></i>
+   					<i class="fab fa-instagram"></i>
+   					<i class="fab fa-youtube"></i>
+   				</div>
+   			</div>
+   		</div>
+   	</section>
+	<!-- 第二層商店介紹 -->
+   	<section>
+   		<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+   			<div class="container">
+			  <a class="navbar-brand" href="#"><i class="fas fa-seedling"></i></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item">
+			        <a class="nav-link" href="index.html">首頁<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">關於我們</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="20190327-organic-3.html">產品介紹</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">免運活動即將開始</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</nav>	
+   	</section>
+   
+   	<div class="bg-cover" style="background-image: url(image-o/title1.jpg);height: 650px;"></div>
+   	<div class="word">
+    	<h1>開心農場</h1>
+    	<p>遭遇痛苦一年後來內地害怕一張寵物網際專，小學主體是以說是事故淡淡如，過程目標內置表情基層有限鍵盤有限責任公司並不是女朋友所，一身投入廣告內部姐姐無派豪華新鮮，支付大連系統商務只要測試最終房產還能思，。</p>
+    </div>
+    <div class="word2">
+    	<h1>organic.農場</h1>
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos culpa, enim veniam sapiente cumque! Fugit voluptatum earum, id sed fugiat ratione veniam rem velit maxime est ut, quae corporis odio.</p>
+    </div>
+
+    <div class="timeline-section">
+    	<div class="container">
+	    	<div class="row timeline-pointer">
+	    		<div class="col-sm-6 mt-5 text-center">
+	    			<div class="title">
+	    				<h1>關 於 我 們<small>About us</small></h1>
+	    			</div>
+					<div class="subtitle">
+						<h3>開心農場</h3>
+					</div>
+					<div class="text">
+						<p>選擇有機不只對於健康的訴求，也是對環境的友善，現今”慣行農法”解決了糧食問題、降低了飢荒的危機，卻也伴隨著一些問題。大量使用化學肥料及農藥，造成土地及水源等環境污染，甚至帶給耕作者身體疾病，而作物的農藥殘留也影響食用者的健康，健康飲食是可晴開心農場該去提倡的。</p>
+					</div>
+	    		</div>
+	    		<div class="col-sm-6">
+	    			<div class="ping">
+	    				<img src="image-o/DSC05187.JPG" alt="" class="img-fluid img-thumbnail">
+	    			</div>	
+	    		</div>
+	    	</div>
+	    	<div class="row flex-row-reverse timeline-pointer">
+	    		<div class="col-sm-6 mt-5 text-center">
+	    			<div class="title">
+	    				<h1>目 標 願 景<small>Objective</small></h1>
+	    			</div>
+					<div class="subtitle">
+						<h3>讓你買的安心，吃的開心</h3>
+					</div>
+					<p>在現今有更多的農民投入有機農業的行列，但全台農戶約77萬戶，有機農戶為2969戶，佔所有農戶的0.3%，這比例還是很懸殊，主要還是有機產品生產成本高產量低，以及鄰田汙染，跟尋找通路不易種種問題，我們希望更多農民能投入這產業，以本身做一個指標，讓農民不用困擾沒有地方去做銷售的平台，能與更多的有機農場合作，提倡友善環境與健康飲食。</p>
+	    		</div>
+	    		<div class="col-sm-6">
+	    			<div class="ping">
+	    				<img src="image-o/DSC05088.JPG" alt="" class="img-fluid img-thumbnail">
+	    			</div>	
+	    		</div>
+	    	</div>	
+	    	<div class="row timeline-pointer">
+	    		<div class="col-sm-6 mt-5 text-center ">
+	    			<div class="title">
+	    				<h1>在地生產 在地消費<small>Local</small></h1>
+	    			</div>
+					<div class="subtitle">
+						<h3>讓你買的安心，吃的開心</h3>
+					</div>
+					<p>透過可晴開心農場，讓附近中彰投的消費者更快速能獲得新鮮的有機蔬果，省去在傳統市場購買時間，又兼顧到健康飲食，輕鬆又方便。</p>
+	    		</div>
+	    		<div class="col-sm-6">
+	    			<div class="ping">
+	    				<img src="image-o/DSC05122.JPG" alt="" class="img-fluid img-thumbnail">
+	    			</div>	
+	    		</div>
+	    	<div class="row flex-row-reverse mb-2 timeline-pointer">
+	    		<div class="col-sm-6 mt-5 text-center">
+	    			<div class="title">
+	    				<h1>店家資訊<small>Store information</small></h1>
+	    			</div>
+					<div class="subtitle">
+						<h3>讓你買的安心，吃的開心</h3>
+					</div>
+					<ul class="list">
+						<li>營業時間:06:00~17:00</li>
+						<li>地址:台中市xxxxxxxxxx</li>
+						<li>電話:0919-1234567</li>
+					</ul>
+	    		</div>
+	    		<div class="col-sm-6">
+	    			<div class="ping">
+	    				<img src="image-o/DSC05179.JPG" alt="" class="img-fluid img-thumbnail">
+	    			</div>	
+	    		</div>
+	    	</div>
+		</div>
+    </div>
+	    
+	<div class="footer text-center">
+		開心農場所有權 TEL:0912345678 MAIL:abc@abc.com
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+  </body>
+</html>
